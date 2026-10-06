@@ -28,6 +28,7 @@ def main():
 
             # นำภาพจากกล้องเข้าสู่โมเดล YOLO
             results = model.predict(
+                conf=0.7,
                 source=frame,
                 stream=True,    # ประมวลผลแบบต่อเนื่อง เหมาะสำหรับวิดีโอหรือ Real-time
                 device='cpu'    # ใช้ CPU ในการประมวลผล
